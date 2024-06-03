@@ -158,7 +158,6 @@ h1 {
   /* border: 1px solid black; */
   border-radius: 15px;
   margin: 20px;
-
 }
 .card__img {
   width: 200px;
@@ -244,7 +243,7 @@ h1 {
 .card-6:hover .card__img {
   transform: skewY(20deg);
 }
-.card-7{
+.card-7 {
   perspective: 100px;
 }
 .card-7 .card__img {
@@ -264,3 +263,17 @@ h1 {
 }
 
 /*!--------------------cards----------------------FIN */
+@media (max-width: 768px) {
+  .cards__container {
+    margin: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .navbar {
+    flex-direction: column;
+  }
+  .navbar__left ul,
+  .navbar__right ul {
+    flex-direction: column;
+  }
+}
