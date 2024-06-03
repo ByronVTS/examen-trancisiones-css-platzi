@@ -1,0 +1,266 @@
+/* Reseteo básico de estilos */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Configuración básica del body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /* o cualquier otra fuente base que prefieras */
+  line-height: 1.6;
+  background-color: #f4f4f4; /* Color de fondo base */
+  color: #333; /* Color de texto base */
+}
+
+/* Estilos básicos para enlaces */
+a {
+  color: inherit; /* Hace que los enlaces tomen el color del texto base */
+  text-decoration: none; /* Quita el subrayado de los enlaces */
+}
+
+a:hover {
+  text-decoration: underline; /* Añade subrayado al pasar el ratón por encima */
+}
+
+/* Estilos básicos para listas */
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Estilos básicos para imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Otros ajustes básicos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 10px 0;
+  font-weight: normal;
+}
+
+p {
+  margin: 0 0 10px 0;
+}
+
+/* Formularios */
+input,
+button,
+textarea,
+select {
+  font: inherit; /* Asegura que los formularios tomen la fuente base */
+}
+
+/*!--------------------navbar---------------------  */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(
+    to right,
+    rgb(147, 197, 253),
+    rgb(187, 247, 208),
+    rgb(253, 224, 71)
+  );
+}
+.navbar__left ul,
+.navbar__right ul {
+  display: flex;
+  gap: 50px;
+  padding: 20px;
+}
+.ex {
+  padding: 10px;
+  border-radius: 10px;
+}
+.ex1 {
+  background: linear-gradient(to right, rgb(34, 197, 94), rgb(21, 128, 61));
+  transition: transform 100ms linear;
+}
+.ex2 {
+  background: linear-gradient(to right, rgb(202, 138, 4), rgb(220, 38, 38));
+  transition: transform 200ms linear;
+}
+.ex3 {
+  background: linear-gradient(
+    to right,
+    rgb(101, 163, 13),
+    rgb(253, 224, 71),
+    rgb(220, 38, 38)
+  );
+  transition: transform 300ms linear;
+}
+.ex4 {
+  background: linear-gradient(
+    to right,
+    rgb(251, 113, 133),
+    rgb(217, 70, 239),
+    rgb(99, 102, 241)
+  );
+  transition: transform 400ms linear;
+}
+.ex5 {
+  background: linear-gradient(to right, rgb(255, 228, 230), rgb(204, 251, 241));
+  transition: transform 500ms linear;
+}
+.navbar__left:hover .ex {
+  transform: scale(1.5);
+}
+.login {
+  background: linear-gradient(
+    to right,
+    rgb(244, 63, 94),
+    rgb(248, 113, 113),
+    rgb(239, 68, 68)
+  );
+  transition: transform 200ms;
+}
+.profile {
+  background: conic-gradient(
+    at center top,
+    rgb(14, 165, 233),
+    rgb(254, 215, 170),
+    rgb(202, 138, 4)
+  );
+  transition: transform 300ms;
+}
+.navbar__right:hover .login {
+  transform: scaleX(2);
+}
+.navbar__right:hover .profile {
+  transform: scaley(2);
+}
+/*!--------------------navbar---------------------FIN  */
+/*!--------------------cards---------------------- */
+h1 {
+  text-align: center;
+}
+.cards__container {
+  margin: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.card {
+  width: 300px;
+  height: auto;
+  /* border: 1px solid black; */
+  border-radius: 15px;
+  margin: 20px;
+
+}
+.card__img {
+  width: 200px;
+  height: 200px;
+  /* border: 1px solid green; */
+  border-radius: 15px;
+  margin: 0 auto;
+}
+.card-1 .card__img {
+  background: conic-gradient(
+    at left center,
+    rgb(244, 63, 94),
+    rgb(67, 56, 202)
+  );
+  transition: transform 1s linear;
+}
+.card__info {
+  width: 300px;
+  height: auto;
+  border: 1px solid blueviolet;
+  border-radius: 15px;
+  padding: 10px;
+  margin-top: 10px;
+}
+.card__info h3 {
+  text-align: center;
+}
+.card__info p {
+  margin-bottom: 5px;
+}
+.card-1:hover .card__img {
+  transform: rotate(180deg);
+}
+.card-2 .card__img {
+  background-color: #4158d0;
+  background: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
+  transform-origin: top right;
+  transition: transform 1s linear;
+}
+.card-2:hover .card__img {
+  transform: rotate(360deg);
+}
+.card-3 .card__img {
+  background-color: #ffffff;
+  background-image: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #6284ff 50%,
+    #ff0000 100%
+  );
+  transition: transform 500ms linear;
+}
+.card-3:hover .card__img {
+  transform: translatey(100px);
+}
+.card-4 .card__img {
+  background-color: #d9afd9;
+  background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
+  transition: transform 1s linear;
+  position: relative;
+}
+.card-4:hover .card__img {
+  transform: rotateY(90deg);
+}
+.card-5 .card__img {
+  background-color: #fbab7e;
+  background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+  transition: transform 1s linear;
+}
+.card-5:hover .card__img {
+  transform: rotateX(90deg);
+}
+.card-6 .card__img {
+  background-color: #ff9a8b;
+  background-image: linear-gradient(
+    90deg,
+    #ff9a8b 0%,
+    #ff6a88 55%,
+    #ff99ac 100%
+  );
+  transition: transform 500ms linear;
+}
+.card-6:hover .card__img {
+  transform: skewY(20deg);
+}
+.card-7{
+  perspective: 100px;
+}
+.card-7 .card__img {
+  background-color: #ff3cac;
+  background-image: linear-gradient(
+    225deg,
+    #ff3cac 0%,
+    #784ba0 50%,
+    #2b86c5 100%
+  );
+  transition: transform 500ms linear;
+  transform: rotatex(0deg);
+}
+.card-7:hover .card__img {
+  transform: rotatex(60deg);
+  transform-style: preserve-3d;
+}
+
+/*!--------------------cards----------------------FIN */
